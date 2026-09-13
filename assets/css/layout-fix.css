@@ -42,6 +42,75 @@
 .final-benefits .benefit-icon.bolt{font-size:45px}
 .final-benefits .benefit-sep{width:1px;height:52px;background:rgba(255,255,255,.7)}
 
+/* Rodapé integrado ao próprio fundo do site */
+.footer{
+  min-height:190px;
+  margin-top:-28px;
+  padding:50px 24px 18px;
+  overflow:visible;
+  isolation:isolate;
+  background:transparent;
+}
+
+.footer::before{
+  inset:-35px 0 0;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.018));
+}
+
+.footer-shape{
+  width:205px;
+  height:270px;
+  right:-52px;
+  bottom:-64px;
+  transform:rotate(15deg);
+  opacity:.96;
+  z-index:-1;
+}
+
+.footer-phrase{
+  left:22px;
+  bottom:42px;
+  font-size:25px;
+  line-height:.82;
+  z-index:3;
+}
+
+.footer-phrase i{
+  width:58px;
+  height:5px;
+  margin-top:9px;
+}
+
+.footer-brand{
+  right:18px;
+  bottom:48px;
+  font-size:31px;
+  line-height:.78;
+  letter-spacing:-2px;
+}
+
+.footer-brand i{
+  width:58px;
+  height:5px;
+  margin-top:10px;
+}
+
+.footer-center{
+  margin-bottom:2px;
+  z-index:5;
+}
+
+.footer-center p{
+  font-size:9px;
+  letter-spacing:2px;
+}
+
+.tiny-neon{
+  width:52px;
+  height:4px;
+  margin-bottom:12px;
+}
+
 @media (max-width:720px){
   .hero{
     min-height:0;
@@ -129,55 +198,70 @@
     grid-template-columns:112px 12px 1fr 48px;
   }
 
-  .photo-wrap{
-    border-radius:22px 0 0 22px;
-  }
-
-  .slash{
-    width:9px;
-    height:58px;
-  }
-
-  .service-copy{
-    padding-left:7px;
-  }
-
-  .service-copy strong{
-    font-size:13px;
-    line-height:1;
-  }
-
-  .service-copy small{
-    margin-top:5px;
-    font-size:6.5px;
-    letter-spacing:1px;
-  }
-
-  .round-arrow{
-    width:38px;
-    height:38px;
-    font-size:24px;
-  }
+  .photo-wrap{border-radius:22px 0 0 22px}
+  .slash{width:9px;height:58px}
+  .service-copy{padding-left:7px}
+  .service-copy strong{font-size:13px;line-height:1}
+  .service-copy small{margin-top:5px;font-size:6.5px;letter-spacing:1px}
+  .round-arrow{width:38px;height:38px;font-size:24px}
 
   .final-benefits{
-    margin-top:14px;
-    padding:16px 12px 2px;
+    margin-top:8px;
+    padding:12px 12px 0;
     gap:10px;
   }
 
-  .final-benefits .benefit{
-    gap:7px;
-    font-size:9px;
-  }
-
-  .final-benefits .benefit-icon{
-    font-size:24px;
-    min-width:26px;
-  }
-
+  .final-benefits .benefit{gap:7px;font-size:9px}
+  .final-benefits .benefit-icon{font-size:24px;min-width:26px}
   .final-benefits .benefit-icon.heart{font-size:33px}
   .final-benefits .benefit-icon.bolt{font-size:35px}
   .final-benefits .benefit-sep{height:42px}
+
+  .footer{
+    min-height:160px;
+    margin-top:-34px;
+    padding:52px 14px 14px;
+  }
+
+  .footer-shape{
+    width:150px;
+    height:215px;
+    right:-34px;
+    bottom:-52px;
+    transform:rotate(14deg);
+  }
+
+  .footer-phrase{
+    left:16px;
+    bottom:30px;
+    font-size:18px;
+    line-height:.82;
+  }
+
+  .footer-phrase i{width:44px;height:4px;margin-top:7px}
+
+  .footer-brand{
+    right:10px;
+    bottom:35px;
+    font-size:23px;
+    letter-spacing:-1.5px;
+  }
+
+  .footer-brand i{width:44px;height:4px;margin-top:8px}
+
+  .footer-center{
+    margin-bottom:0;
+    transform:translateY(4px);
+  }
+
+  .footer-center p{
+    font-size:6.5px;
+    letter-spacing:1.3px;
+    white-space:nowrap;
+  }
+
+  .footer-center b{margin:0 3px}
+  .tiny-neon{width:40px;height:3px;margin-bottom:9px}
 }
 
 @media (max-width:400px){
@@ -190,4 +274,7 @@
   .round-arrow{width:36px;height:36px;font-size:22px}
   .final-benefits{gap:7px;padding-left:8px;padding-right:8px}
   .final-benefits .benefit{font-size:8px}
+  .footer-shape{width:138px;height:200px;right:-30px}
+  .footer-phrase{font-size:17px;left:12px}
+  .footer-brand{font-size:21px;right:8px}
 }
