@@ -1,7 +1,7 @@
-/* Correção do topo sem interferir na logo original */
+/* Correção definitiva do topo e da logo */
 .hero{
   background:
-    radial-gradient(circle at 50% 27%,rgba(201,255,17,.11),transparent 24%),
+    radial-gradient(circle at 50% 27%,rgba(201,255,17,.08),transparent 25%),
     linear-gradient(180deg,#090a09 0%,#060706 58%,#050505 100%);
 }
 .hero::before{
@@ -23,23 +23,27 @@
   inset:0;
   z-index:-1;
   background:
-    linear-gradient(90deg,rgba(0,0,0,.22),transparent 18%,transparent 82%,rgba(0,0,0,.2)),
-    radial-gradient(circle at 50% 29%,rgba(201,255,17,.08),transparent 32%);
+    linear-gradient(90deg,rgba(0,0,0,.22),transparent 18%,transparent 82%,rgba(0,0,0,.2));
   pointer-events:none;
 }
 
-/* A logo usa somente o arquivo original, sem imagem de fundo ou camada extra */
+/* Usa somente a nova arte limpa da logo. A imagem antiga fica totalmente desativada. */
 .logo-wrap{
-  background:transparent;
+  border-radius:50%;
+  overflow:hidden;
   padding:0;
-  overflow:visible;
+  background:#ececec url("../images/logo-kd-fixed.webp?v=clean-20260913-2") center center / cover no-repeat;
+  box-shadow:
+    0 0 0 3px rgba(201,255,17,.88),
+    0 0 14px rgba(201,255,17,.22);
 }
 .logo-wrap img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
-  border-radius:50%;
+  opacity:0 !important;
+  visibility:hidden !important;
+  pointer-events:none;
+}
+.logo-glow{
+  display:none !important;
 }
 
 @media (max-width:720px){
