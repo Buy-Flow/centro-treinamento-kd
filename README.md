@@ -1,26 +1,33 @@
 # Centro de Treinamento KD
 
-Landing page oficial do **Centro de Treinamento KD**, desenvolvida com foco em apresentação premium da marca e conversão para os canais de atendimento.
+Landing page oficial do **Centro de Treinamento KD**, criada para funcionar como um direcionador premium da marca: visual forte, responsivo e com acesso rápido aos principais canais.
 
-## Conteúdo
+## Destaques
 
-- Hero visual da marca KD
+- Hero visual personalizado da marca KD
 - Treino funcional e personalizado
 - Dança e Step
 - Localização no Google
 - Instagram oficial
 - CTAs diretos para WhatsApp
 - Layout responsivo para celular e desktop
-- Animações e interações em JavaScript
-- Imagens otimizadas em WebP
+- Animações de entrada e efeito de profundidade/tilt
+- Imagens separadas e otimizadas em WebP
+- Estrutura preparada para hospedagem estática
 
-## Estrutura
+## Estrutura do projeto
 
 ```text
 index.html
+.nojekyll
+robots.txt
+site.webmanifest
+404.html
 assets/
-  css/style.css
-  js/main.js
+  css/
+    style.css
+  js/
+    main.js
   images/
     hero-kd.webp
     logo-kd.webp
@@ -28,12 +35,18 @@ assets/
     danca-step.webp
     localizacao.webp
     instagram.webp
+    favicon.svg
 ```
 
-## Links usados no site
+## Links configurados
 
 - Instagram: `@centrodetreinamentokd`
-- Localização: link oficial informado pelo proprietário
-- WhatsApp: contatos separados para funcional/personalizado e dança/step
+- Localização: link oficial do Centro de Treinamento KD
+- WhatsApp funcional/personalizado: `+55 69 99319-2797`
+- WhatsApp dança/step: `+55 69 99381-6666`
 
-Site estático: basta abrir `index.html` ou publicar o repositório em qualquer hospedagem estática.
+## Publicação
+
+O projeto é totalmente estático. Pode ser publicado no GitHub Pages, Netlify, Vercel, Cloudflare Pages ou qualquer hospedagem que sirva arquivos HTML/CSS/JS.
+
+Para testar localmente, basta abrir `index.html` no navegador.
