@@ -1,0 +1,124 @@
+/* Ajustes de composição solicitados: cards mais próximos da CTA e benefícios no final */
+
+.hero{
+  min-height:auto;
+  padding-bottom:18px;
+}
+
+.cards{
+  margin-top:0;
+  padding-top:0;
+}
+
+.final-benefits{
+  margin:22px auto 0;
+  padding:22px 28px 8px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:26px;
+  position:relative;
+  z-index:4;
+}
+
+.final-benefits .benefit{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  text-align:left;
+  font-size:13px;
+  line-height:1.2;
+  font-weight:900;
+}
+
+.final-benefits .benefit-icon{
+  font-size:31px;
+  line-height:1;
+  min-width:38px;
+  text-align:center;
+}
+
+.final-benefits .benefit-icon.dumbbell{
+  font-size:22px;
+  letter-spacing:-4px;
+}
+
+.final-benefits .benefit-icon.heart{
+  font-size:43px;
+  font-family:Georgia,serif;
+  font-weight:400;
+}
+
+.final-benefits .benefit-icon.bolt{
+  font-size:45px;
+}
+
+.final-benefits .benefit-sep{
+  width:1px;
+  height:52px;
+  background:rgba(255,255,255,.7);
+}
+
+@media (max-width:720px){
+  .hero{
+    min-height:auto;
+    padding:20px 20px 10px;
+  }
+
+  .logo-wrap{
+    margin:28px auto 14px;
+  }
+
+  .tagline{
+    margin-top:14px;
+  }
+
+  .cta{
+    margin-top:20px;
+  }
+
+  .cards{
+    margin-top:8px;
+    padding-top:0;
+  }
+
+  .final-benefits{
+    margin-top:18px;
+    padding:18px 12px 2px;
+    gap:10px;
+  }
+
+  .final-benefits .benefit{
+    gap:7px;
+    font-size:9px;
+  }
+
+  .final-benefits .benefit-icon{
+    font-size:24px;
+    min-width:26px;
+  }
+
+  .final-benefits .benefit-icon.heart{
+    font-size:33px;
+  }
+
+  .final-benefits .benefit-icon.bolt{
+    font-size:35px;
+  }
+
+  .final-benefits .benefit-sep{
+    height:42px;
+  }
+}
+
+@media (max-width:400px){
+  .final-benefits{
+    gap:7px;
+    padding-left:8px;
+    padding-right:8px;
+  }
+
+  .final-benefits .benefit{
+    font-size:8px;
+  }
+}
