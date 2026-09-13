@@ -2,9 +2,29 @@
 .hero{min-height:auto;padding-bottom:12px}
 .cards{margin-top:0;padding-top:0}
 
+/* Bloco visual sobe e fica imediatamente após os cards */
+.footer{
+  min-height:190px;
+  margin-top:2px;
+  padding:34px 24px 18px;
+  overflow:visible;
+  isolation:isolate;
+  background:transparent;
+}
+.footer::before{inset:-16px 0 0;background:linear-gradient(180deg,transparent,rgba(255,255,255,.018))}
+.footer-shape{width:198px;height:280px;right:-48px;bottom:-18px;transform:rotate(15deg);opacity:.96;z-index:-1}
+.footer-phrase{left:22px;bottom:36px;font-size:24px;line-height:.82;z-index:3}
+.footer-phrase i{width:58px;height:5px;margin-top:9px}
+.footer-brand{right:17px;bottom:52px;font-size:29px;line-height:.78;letter-spacing:-2px}
+.footer-brand i{width:56px;height:5px;margin-top:10px}
+.footer-center{margin-bottom:0;z-index:5}
+.footer-center p{font-size:8.5px;letter-spacing:1.8px}
+.tiny-neon{width:50px;height:4px;margin-bottom:11px}
+
+/* Benefícios agora ficam abaixo do bloco visual */
 .final-benefits{
-  margin:14px auto 0;
-  padding:16px 28px 0;
+  margin:0 auto 18px;
+  padding:10px 28px 14px;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -18,33 +38,6 @@
 .final-benefits .benefit-icon.heart{font-size:43px;font-family:Georgia,serif;font-weight:400}
 .final-benefits .benefit-icon.bolt{font-size:45px}
 .final-benefits .benefit-sep{width:1px;height:52px;background:rgba(255,255,255,.7)}
-
-/* O bloco verde faz parte do fundo e sobe por trás dos elementos */
-.footer{
-  min-height:190px;
-  margin-top:-58px;
-  padding:72px 24px 18px;
-  overflow:visible;
-  isolation:isolate;
-  background:transparent;
-}
-.footer::before{inset:-55px 0 0;background:linear-gradient(180deg,transparent,rgba(255,255,255,.018))}
-.footer-shape{
-  width:198px;
-  height:280px;
-  right:-48px;
-  bottom:-18px;
-  transform:rotate(15deg);
-  opacity:.96;
-  z-index:-1;
-}
-.footer-phrase{left:22px;bottom:36px;font-size:24px;line-height:.82;z-index:3}
-.footer-phrase i{width:58px;height:5px;margin-top:9px}
-.footer-brand{right:17px;bottom:52px;font-size:29px;line-height:.78;letter-spacing:-2px}
-.footer-brand i{width:56px;height:5px;margin-top:10px}
-.footer-center{margin-bottom:0;z-index:5}
-.footer-center p{font-size:8.5px;letter-spacing:1.8px}
-.tiny-neon{width:50px;height:4px;margin-bottom:11px}
 
 @media (max-width:720px){
   .hero{min-height:0;padding:14px 18px 10px}
@@ -69,25 +62,8 @@
   .service-copy small{margin-top:5px;font-size:6.5px;letter-spacing:1px}
   .round-arrow{width:38px;height:38px;font-size:24px}
 
-  .final-benefits{margin-top:6px;padding:10px 12px 0;gap:10px;z-index:8}
-  .final-benefits .benefit{gap:7px;font-size:9px}
-  .final-benefits .benefit-icon{font-size:24px;min-width:26px}
-  .final-benefits .benefit-icon.heart{font-size:33px}
-  .final-benefits .benefit-icon.bolt{font-size:35px}
-  .final-benefits .benefit-sep{height:42px}
-
-  .footer{
-    min-height:150px;
-    margin-top:-72px;
-    padding:86px 14px 12px;
-  }
-  .footer-shape{
-    width:152px;
-    height:230px;
-    right:-30px;
-    bottom:-8px;
-    transform:rotate(14deg);
-  }
+  .footer{min-height:150px;margin-top:-2px;padding:26px 14px 12px}
+  .footer-shape{width:152px;height:230px;right:-30px;bottom:-8px;transform:rotate(14deg)}
   .footer-phrase{left:14px;bottom:20px;font-size:17px;line-height:.82}
   .footer-phrase i{width:42px;height:4px;margin-top:7px}
   .footer-brand{right:9px;bottom:28px;font-size:21px;letter-spacing:-1.4px}
@@ -96,6 +72,13 @@
   .footer-center p{font-size:6px;letter-spacing:1.15px;white-space:nowrap}
   .footer-center b{margin:0 3px}
   .tiny-neon{width:38px;height:3px;margin-bottom:8px}
+
+  .final-benefits{margin:0 auto 12px;padding:8px 12px 12px;gap:10px;z-index:8}
+  .final-benefits .benefit{gap:7px;font-size:9px}
+  .final-benefits .benefit-icon{font-size:24px;min-width:26px}
+  .final-benefits .benefit-icon.heart{font-size:33px}
+  .final-benefits .benefit-icon.bolt{font-size:35px}
+  .final-benefits .benefit-sep{height:42px}
 }
 
 @media (max-width:400px){
@@ -106,9 +89,9 @@
   .service-card{height:78px;grid-template-columns:105px 11px 1fr 44px}
   .service-copy strong{font-size:12px}
   .round-arrow{width:36px;height:36px;font-size:22px}
-  .final-benefits{gap:7px;padding-left:8px;padding-right:8px}
-  .final-benefits .benefit{font-size:8px}
   .footer-shape{width:145px;height:218px;right:-28px;bottom:-6px}
   .footer-phrase{font-size:16px;left:10px;bottom:18px}
   .footer-brand{font-size:20px;right:7px;bottom:26px}
+  .final-benefits{gap:7px;padding-left:8px;padding-right:8px}
+  .final-benefits .benefit{font-size:8px}
 }
