@@ -1,36 +1,53 @@
-/* Ajustes finais de composição */
-.hero{min-height:auto;padding-bottom:12px}
+/* Ajustes de composição e correção do topo */
+.hero{
+  min-height:auto;
+  padding-bottom:10px;
+  overflow:hidden;
+}
 .cards{margin-top:0;padding-top:0}
 
-/* Bloco visual sobe e fica imediatamente após os cards */
+/* Bloco visual final sobe e se integra ao fundo */
 .footer{
-  min-height:190px;
-  margin-top:2px;
-  padding:34px 24px 18px;
+  min-height:172px;
+  margin-top:-24px;
+  padding:34px 24px 16px;
   overflow:visible;
   isolation:isolate;
   background:transparent;
 }
-.footer::before{inset:-16px 0 0;background:linear-gradient(180deg,transparent,rgba(255,255,255,.018))}
-.footer-shape{width:198px;height:280px;right:-48px;bottom:-18px;transform:rotate(15deg);opacity:.96;z-index:-1}
-.footer-phrase{left:22px;bottom:36px;font-size:24px;line-height:.82;z-index:3}
-.footer-phrase i{width:58px;height:5px;margin-top:9px}
-.footer-brand{right:17px;bottom:52px;font-size:29px;line-height:.78;letter-spacing:-2px}
-.footer-brand i{width:56px;height:5px;margin-top:10px}
+.footer::before{
+  content:"";
+  position:absolute;
+  inset:-20px 0 0;
+  background:linear-gradient(180deg,transparent,rgba(255,255,255,.018));
+  z-index:-2;
+}
+.footer-shape{
+  width:190px;
+  height:262px;
+  right:-44px;
+  bottom:-10px;
+  transform:rotate(14deg);
+  opacity:.97;
+  z-index:-1;
+}
+.footer-phrase{left:20px;bottom:32px;font-size:23px;line-height:.82;z-index:3}
+.footer-phrase i{width:56px;height:5px;margin-top:8px}
+.footer-brand{right:15px;bottom:45px;font-size:28px;line-height:.78;letter-spacing:-2px}
+.footer-brand i{width:54px;height:5px;margin-top:9px}
 .footer-center{margin-bottom:0;z-index:5}
-.footer-center p{font-size:8.5px;letter-spacing:1.8px}
-.tiny-neon{width:50px;height:4px;margin-bottom:11px}
+.footer-center p{font-size:8px;letter-spacing:1.65px}
+.tiny-neon{width:48px;height:4px;margin-bottom:10px}
 
-/* Benefícios agora ficam abaixo do bloco visual */
 .final-benefits{
-  margin:0 auto 18px;
-  padding:10px 28px 14px;
+  margin:-10px auto 12px;
+  padding:8px 28px 12px;
   display:flex;
   justify-content:center;
   align-items:center;
   gap:26px;
   position:relative;
-  z-index:6;
+  z-index:8;
 }
 .final-benefits .benefit{display:flex;align-items:center;gap:14px;text-align:left;font-size:13px;line-height:1.2;font-weight:900}
 .final-benefits .benefit-icon{font-size:31px;line-height:1;min-width:38px;text-align:center}
@@ -40,21 +57,96 @@
 .final-benefits .benefit-sep{width:1px;height:52px;background:rgba(255,255,255,.7)}
 
 @media (max-width:720px){
-  .hero{min-height:0;padding:14px 18px 10px}
-  .hamburger{top:18px;left:18px;width:25px;height:23px}
-  .side-left{left:12px;top:62px;font-size:23px;letter-spacing:-1.5px}
-  .side-left i{width:40px;height:4px;margin-top:8px}
-  .side-right{right:12px;top:20px;font-size:16px}
-  .side-right i{width:38px;height:3px;margin-top:6px}
-  .logo-wrap{width:138px;height:138px;margin:18px auto 10px}
-  .hero h1{font-size:26px;letter-spacing:-1px;line-height:1}
-  .modalities{margin-top:9px;font-size:8px;letter-spacing:2px}
-  .tagline{margin-top:10px;font-size:8px;letter-spacing:2.5px;line-height:1.35}
-  .cta{width:300px;max-width:88%;min-height:60px;border-radius:28px;margin-top:14px;padding-left:28px}
+  /* topo estabilizado: sem sobreposição e sem elementos cortados */
+  .hero{
+    min-height:0;
+    padding:18px 16px 8px;
+    overflow:hidden;
+  }
+  .hamburger{
+    top:18px;
+    left:18px;
+    width:26px;
+    height:24px;
+    z-index:12;
+  }
+  .hamburger span{height:3px}
+
+  .side-copy{pointer-events:none}
+  .side-left{
+    left:12px;
+    top:72px;
+    font-size:22px;
+    line-height:.84;
+    letter-spacing:-1.2px;
+    max-width:84px;
+  }
+  .side-left i{width:38px;height:4px;margin-top:7px}
+  .side-right{
+    right:12px;
+    top:23px;
+    font-size:15px;
+    line-height:.94;
+    max-width:105px;
+  }
+  .side-right i{width:36px;height:3px;margin-top:5px}
+
+  .logo-wrap{
+    width:154px;
+    height:154px;
+    margin:24px auto 12px;
+    flex:none;
+  }
+  .logo-wrap img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+  }
+
+  .hero-copy{padding:0 4px}
+  .hero h1{
+    margin:0 auto;
+    font-size:27px;
+    line-height:1.03;
+    letter-spacing:-1.2px;
+    max-width:360px;
+  }
+  .modalities{
+    margin-top:10px;
+    font-size:8px;
+    letter-spacing:1.9px;
+    white-space:normal;
+    line-height:1.45;
+  }
+  .tagline{
+    margin-top:9px;
+    font-size:8px;
+    letter-spacing:2.3px;
+    line-height:1.35;
+  }
+
+  .cta{
+    width:300px;
+    max-width:90%;
+    min-height:58px;
+    border-radius:28px;
+    margin:14px auto 0;
+    padding:0 8px 0 27px;
+  }
   .cta span:first-child{font-size:16px;line-height:1.02}
-  .cta-arrow{width:48px;height:48px;font-size:27px}
-  .cards{margin-top:8px;padding:0 18px 12px;gap:8px}
-  .service-card{height:82px;border-radius:23px;grid-template-columns:112px 12px 1fr 48px}
+  .cta-arrow{width:46px;height:46px;font-size:26px}
+
+  .cards{
+    margin-top:6px;
+    padding:0 16px 10px;
+    gap:8px;
+  }
+  .service-card{
+    height:82px;
+    border-radius:23px;
+    grid-template-columns:112px 12px 1fr 48px;
+  }
   .photo-wrap{border-radius:22px 0 0 22px}
   .slash{width:9px;height:58px}
   .service-copy{padding-left:7px}
@@ -62,36 +154,52 @@
   .service-copy small{margin-top:5px;font-size:6.5px;letter-spacing:1px}
   .round-arrow{width:38px;height:38px;font-size:24px}
 
-  .footer{min-height:150px;margin-top:-2px;padding:26px 14px 12px}
-  .footer-shape{width:152px;height:230px;right:-30px;bottom:-8px;transform:rotate(14deg)}
-  .footer-phrase{left:14px;bottom:20px;font-size:17px;line-height:.82}
-  .footer-phrase i{width:42px;height:4px;margin-top:7px}
-  .footer-brand{right:9px;bottom:28px;font-size:21px;letter-spacing:-1.4px}
-  .footer-brand i{width:42px;height:4px;margin-top:7px}
-  .footer-center{margin-bottom:0;transform:translateY(2px)}
-  .footer-center p{font-size:6px;letter-spacing:1.15px;white-space:nowrap}
-  .footer-center b{margin:0 3px}
-  .tiny-neon{width:38px;height:3px;margin-bottom:8px}
+  /* bloco inferior inteiro sobe */
+  .footer{
+    min-height:136px;
+    margin-top:-44px;
+    padding:54px 12px 10px;
+  }
+  .footer-shape{
+    width:142px;
+    height:205px;
+    right:-26px;
+    bottom:-2px;
+    transform:rotate(13deg);
+  }
+  .footer-phrase{left:12px;bottom:17px;font-size:16px;line-height:.82}
+  .footer-phrase i{width:40px;height:4px;margin-top:6px}
+  .footer-brand{right:7px;bottom:24px;font-size:20px;letter-spacing:-1.3px}
+  .footer-brand i{width:40px;height:4px;margin-top:6px}
+  .footer-center{margin-bottom:0;transform:translateY(1px)}
+  .footer-center p{font-size:5.8px;letter-spacing:1.05px;white-space:nowrap}
+  .footer-center b{margin:0 2px}
+  .tiny-neon{width:36px;height:3px;margin-bottom:7px}
 
-  .final-benefits{margin:0 auto 12px;padding:8px 12px 12px;gap:10px;z-index:8}
-  .final-benefits .benefit{gap:7px;font-size:9px}
-  .final-benefits .benefit-icon{font-size:24px;min-width:26px}
-  .final-benefits .benefit-icon.heart{font-size:33px}
-  .final-benefits .benefit-icon.bolt{font-size:35px}
-  .final-benefits .benefit-sep{height:42px}
+  .final-benefits{
+    margin:-12px auto 8px;
+    padding:6px 10px 10px;
+    gap:9px;
+  }
+  .final-benefits .benefit{gap:6px;font-size:8.5px}
+  .final-benefits .benefit-icon{font-size:23px;min-width:25px}
+  .final-benefits .benefit-icon.heart{font-size:31px}
+  .final-benefits .benefit-icon.bolt{font-size:33px}
+  .final-benefits .benefit-sep{height:38px}
 }
 
 @media (max-width:400px){
-  .hero{padding-left:14px;padding-right:14px}
-  .logo-wrap{width:126px;height:126px}
-  .hero h1{font-size:23px}
-  .cards{padding-left:12px;padding-right:12px;gap:7px}
-  .service-card{height:78px;grid-template-columns:105px 11px 1fr 44px}
+  .hero{padding-left:12px;padding-right:12px}
+  .logo-wrap{width:144px;height:144px}
+  .hero h1{font-size:24px}
+  .cards{padding-left:11px;padding-right:11px;gap:7px}
+  .service-card{height:78px;grid-template-columns:104px 11px 1fr 44px}
   .service-copy strong{font-size:12px}
-  .round-arrow{width:36px;height:36px;font-size:22px}
-  .footer-shape{width:145px;height:218px;right:-28px;bottom:-6px}
-  .footer-phrase{font-size:16px;left:10px;bottom:18px}
-  .footer-brand{font-size:20px;right:7px;bottom:26px}
-  .final-benefits{gap:7px;padding-left:8px;padding-right:8px}
-  .final-benefits .benefit{font-size:8px}
+  .round-arrow{width:35px;height:35px;font-size:22px}
+  .footer{margin-top:-48px}
+  .footer-shape{width:135px;height:196px;right:-24px}
+  .footer-phrase{font-size:15px;left:9px;bottom:16px}
+  .footer-brand{font-size:19px;right:6px;bottom:22px}
+  .final-benefits{gap:6px;padding-left:6px;padding-right:6px}
+  .final-benefits .benefit{font-size:7.5px}
 }
