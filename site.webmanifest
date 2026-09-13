@@ -1,0 +1,17 @@
+{
+  "name": "Centro de Treinamento KD",
+  "short_name": "KD Treinamento",
+  "description": "Funcional, personalizado, dança e step no Centro de Treinamento KD.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#070808",
+  "theme_color": "#080909",
+  "icons": [
+    {
+      "src": "assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
