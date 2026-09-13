@@ -1,203 +1,67 @@
-/* Composição: cards imediatamente após a CTA e benefícios no final */
-.hero{
-  min-height:auto;
-  padding-bottom:12px;
-}
-
-.cards{
-  margin-top:0;
-  padding-top:0;
-}
+/* Ajustes finais de composição */
+.hero{min-height:auto;padding-bottom:12px}
+.cards{margin-top:0;padding-top:0}
 
 .final-benefits{
-  margin:22px auto 0;
-  padding:22px 28px 8px;
+  margin:14px auto 0;
+  padding:16px 28px 0;
   display:flex;
   justify-content:center;
   align-items:center;
   gap:26px;
   position:relative;
-  z-index:4;
+  z-index:6;
 }
-
-.final-benefits .benefit{
-  display:flex;
-  align-items:center;
-  gap:14px;
-  text-align:left;
-  font-size:13px;
-  line-height:1.2;
-  font-weight:900;
-}
-
-.final-benefits .benefit-icon{
-  font-size:31px;
-  line-height:1;
-  min-width:38px;
-  text-align:center;
-}
-
+.final-benefits .benefit{display:flex;align-items:center;gap:14px;text-align:left;font-size:13px;line-height:1.2;font-weight:900}
+.final-benefits .benefit-icon{font-size:31px;line-height:1;min-width:38px;text-align:center}
 .final-benefits .benefit-icon.dumbbell{font-size:22px;letter-spacing:-4px}
 .final-benefits .benefit-icon.heart{font-size:43px;font-family:Georgia,serif;font-weight:400}
 .final-benefits .benefit-icon.bolt{font-size:45px}
 .final-benefits .benefit-sep{width:1px;height:52px;background:rgba(255,255,255,.7)}
 
-/* Rodapé integrado ao próprio fundo do site */
+/* O bloco verde faz parte do fundo e sobe por trás dos elementos */
 .footer{
   min-height:190px;
-  margin-top:-28px;
-  padding:50px 24px 18px;
+  margin-top:-58px;
+  padding:72px 24px 18px;
   overflow:visible;
   isolation:isolate;
   background:transparent;
 }
-
-.footer::before{
-  inset:-35px 0 0;
-  background:linear-gradient(180deg,transparent,rgba(255,255,255,.018));
-}
-
+.footer::before{inset:-55px 0 0;background:linear-gradient(180deg,transparent,rgba(255,255,255,.018))}
 .footer-shape{
-  width:205px;
-  height:270px;
-  right:-52px;
-  bottom:-64px;
+  width:198px;
+  height:280px;
+  right:-48px;
+  bottom:-18px;
   transform:rotate(15deg);
   opacity:.96;
   z-index:-1;
 }
-
-.footer-phrase{
-  left:22px;
-  bottom:42px;
-  font-size:25px;
-  line-height:.82;
-  z-index:3;
-}
-
-.footer-phrase i{
-  width:58px;
-  height:5px;
-  margin-top:9px;
-}
-
-.footer-brand{
-  right:18px;
-  bottom:48px;
-  font-size:31px;
-  line-height:.78;
-  letter-spacing:-2px;
-}
-
-.footer-brand i{
-  width:58px;
-  height:5px;
-  margin-top:10px;
-}
-
-.footer-center{
-  margin-bottom:2px;
-  z-index:5;
-}
-
-.footer-center p{
-  font-size:9px;
-  letter-spacing:2px;
-}
-
-.tiny-neon{
-  width:52px;
-  height:4px;
-  margin-bottom:12px;
-}
+.footer-phrase{left:22px;bottom:36px;font-size:24px;line-height:.82;z-index:3}
+.footer-phrase i{width:58px;height:5px;margin-top:9px}
+.footer-brand{right:17px;bottom:52px;font-size:29px;line-height:.78;letter-spacing:-2px}
+.footer-brand i{width:56px;height:5px;margin-top:10px}
+.footer-center{margin-bottom:0;z-index:5}
+.footer-center p{font-size:8.5px;letter-spacing:1.8px}
+.tiny-neon{width:50px;height:4px;margin-bottom:11px}
 
 @media (max-width:720px){
-  .hero{
-    min-height:0;
-    padding:14px 18px 10px;
-  }
-
-  .hamburger{
-    top:18px;
-    left:18px;
-    width:25px;
-    height:23px;
-  }
-
-  .side-left{
-    left:12px;
-    top:62px;
-    font-size:23px;
-    letter-spacing:-1.5px;
-  }
-
+  .hero{min-height:0;padding:14px 18px 10px}
+  .hamburger{top:18px;left:18px;width:25px;height:23px}
+  .side-left{left:12px;top:62px;font-size:23px;letter-spacing:-1.5px}
   .side-left i{width:40px;height:4px;margin-top:8px}
-
-  .side-right{
-    right:12px;
-    top:20px;
-    font-size:16px;
-  }
-
+  .side-right{right:12px;top:20px;font-size:16px}
   .side-right i{width:38px;height:3px;margin-top:6px}
-
-  .logo-wrap{
-    width:138px;
-    height:138px;
-    margin:18px auto 10px;
-  }
-
-  .hero h1{
-    font-size:26px;
-    letter-spacing:-1px;
-    line-height:1;
-  }
-
-  .modalities{
-    margin-top:9px;
-    font-size:8px;
-    letter-spacing:2px;
-  }
-
-  .tagline{
-    margin-top:10px;
-    font-size:8px;
-    letter-spacing:2.5px;
-    line-height:1.35;
-  }
-
-  .cta{
-    width:300px;
-    max-width:88%;
-    min-height:60px;
-    border-radius:28px;
-    margin-top:14px;
-    padding-left:28px;
-  }
-
-  .cta span:first-child{
-    font-size:16px;
-    line-height:1.02;
-  }
-
-  .cta-arrow{
-    width:48px;
-    height:48px;
-    font-size:27px;
-  }
-
-  .cards{
-    margin-top:8px;
-    padding:0 18px 12px;
-    gap:8px;
-  }
-
-  .service-card{
-    height:82px;
-    border-radius:23px;
-    grid-template-columns:112px 12px 1fr 48px;
-  }
-
+  .logo-wrap{width:138px;height:138px;margin:18px auto 10px}
+  .hero h1{font-size:26px;letter-spacing:-1px;line-height:1}
+  .modalities{margin-top:9px;font-size:8px;letter-spacing:2px}
+  .tagline{margin-top:10px;font-size:8px;letter-spacing:2.5px;line-height:1.35}
+  .cta{width:300px;max-width:88%;min-height:60px;border-radius:28px;margin-top:14px;padding-left:28px}
+  .cta span:first-child{font-size:16px;line-height:1.02}
+  .cta-arrow{width:48px;height:48px;font-size:27px}
+  .cards{margin-top:8px;padding:0 18px 12px;gap:8px}
+  .service-card{height:82px;border-radius:23px;grid-template-columns:112px 12px 1fr 48px}
   .photo-wrap{border-radius:22px 0 0 22px}
   .slash{width:9px;height:58px}
   .service-copy{padding-left:7px}
@@ -205,12 +69,7 @@
   .service-copy small{margin-top:5px;font-size:6.5px;letter-spacing:1px}
   .round-arrow{width:38px;height:38px;font-size:24px}
 
-  .final-benefits{
-    margin-top:8px;
-    padding:12px 12px 0;
-    gap:10px;
-  }
-
+  .final-benefits{margin-top:6px;padding:10px 12px 0;gap:10px;z-index:8}
   .final-benefits .benefit{gap:7px;font-size:9px}
   .final-benefits .benefit-icon{font-size:24px;min-width:26px}
   .final-benefits .benefit-icon.heart{font-size:33px}
@@ -218,50 +77,25 @@
   .final-benefits .benefit-sep{height:42px}
 
   .footer{
-    min-height:160px;
-    margin-top:-34px;
-    padding:52px 14px 14px;
+    min-height:150px;
+    margin-top:-72px;
+    padding:86px 14px 12px;
   }
-
   .footer-shape{
-    width:150px;
-    height:215px;
-    right:-34px;
-    bottom:-52px;
+    width:152px;
+    height:230px;
+    right:-30px;
+    bottom:-8px;
     transform:rotate(14deg);
   }
-
-  .footer-phrase{
-    left:16px;
-    bottom:30px;
-    font-size:18px;
-    line-height:.82;
-  }
-
-  .footer-phrase i{width:44px;height:4px;margin-top:7px}
-
-  .footer-brand{
-    right:10px;
-    bottom:35px;
-    font-size:23px;
-    letter-spacing:-1.5px;
-  }
-
-  .footer-brand i{width:44px;height:4px;margin-top:8px}
-
-  .footer-center{
-    margin-bottom:0;
-    transform:translateY(4px);
-  }
-
-  .footer-center p{
-    font-size:6.5px;
-    letter-spacing:1.3px;
-    white-space:nowrap;
-  }
-
+  .footer-phrase{left:14px;bottom:20px;font-size:17px;line-height:.82}
+  .footer-phrase i{width:42px;height:4px;margin-top:7px}
+  .footer-brand{right:9px;bottom:28px;font-size:21px;letter-spacing:-1.4px}
+  .footer-brand i{width:42px;height:4px;margin-top:7px}
+  .footer-center{margin-bottom:0;transform:translateY(2px)}
+  .footer-center p{font-size:6px;letter-spacing:1.15px;white-space:nowrap}
   .footer-center b{margin:0 3px}
-  .tiny-neon{width:40px;height:3px;margin-bottom:9px}
+  .tiny-neon{width:38px;height:3px;margin-bottom:8px}
 }
 
 @media (max-width:400px){
@@ -274,7 +108,7 @@
   .round-arrow{width:36px;height:36px;font-size:22px}
   .final-benefits{gap:7px;padding-left:8px;padding-right:8px}
   .final-benefits .benefit{font-size:8px}
-  .footer-shape{width:138px;height:200px;right:-30px}
-  .footer-phrase{font-size:17px;left:12px}
-  .footer-brand{font-size:21px;right:8px}
+  .footer-shape{width:145px;height:218px;right:-28px;bottom:-6px}
+  .footer-phrase{font-size:16px;left:10px;bottom:18px}
+  .footer-brand{font-size:20px;right:7px;bottom:26px}
 }
