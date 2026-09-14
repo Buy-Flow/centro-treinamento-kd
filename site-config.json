@@ -1,0 +1,49 @@
+{
+  "site": {
+    "title": "Centro de Treinamento KD",
+    "description": "Centro de Treinamento KD — funcional, dança, forró e treino personalizado.",
+    "modalities": "FUNCIONAL • DANÇA • FORRÓ • PERSONALIZADO",
+    "tagline": "MOVIMENTO REAL\nPARA UMA VIDA MELHOR.",
+    "logo": "assets/images/logo-kd-cropped.webp"
+  },
+  "experimental": {
+    "label": "AGENDAR AULA\nEXPERIMENTAL",
+    "phone": "5569993192797",
+    "person": "Roany",
+    "message": "Oi, Roany! Quero agendar uma aula experimental."
+  },
+  "functional": {
+    "title": "TREINO FUNCIONAL\nE PERSONALIZADO",
+    "subtitle": "SEU OBJETIVO. NOSSO PLANO.",
+    "phone": "5569993192797",
+    "person": "Roany",
+    "message": "Oi, Roany! Quero saber mais sobre o treino funcional e personalizado?",
+    "image": "assets/images/treino-funcional-personalizado.webp"
+  },
+  "dance": {
+    "title": "DANÇA E FORRÓ",
+    "subtitle": "ENERGIA QUE TRANSFORMA",
+    "phone": "5569993816666",
+    "person": "Karol",
+    "message": "Oi, Karol! Quero saber mais sobre Dança e Forró?",
+    "image": "assets/images/danca-step.webp"
+  },
+  "location": {
+    "title": "LOCALIZAÇÃO",
+    "subtitle": "VENHA NOS VISITAR",
+    "url": "https://share.google/1H9OOiKIhmWzUExqJ",
+    "image": "assets/images/localizacao.webp"
+  },
+  "instagram": {
+    "title": "INSTAGRAM",
+    "subtitle": "ACOMPANHE NOSSA ROTINA",
+    "url": "https://www.instagram.com/centrodetreinamentokd",
+    "image": "assets/images/instagram.webp"
+  },
+  "footer": {
+    "center": "TREINO • MOVIMENTO • BEM-ESTAR • COMUNIDADE",
+    "benefit1": "MAIS\nDISPOSIÇÃO",
+    "benefit2": "MAIS\nSAÚDE",
+    "benefit3": "MAIS\nCONQUISTAS"
+  }
+}
