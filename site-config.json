@@ -1,8 +1,8 @@
 {
   "site": {
     "title": "Centro de Treinamento KD",
-    "description": "Centro de Treinamento KD — funcional, dança, forró e treino personalizado.",
-    "modalities": "FUNCIONAL • DANÇA • FORRÓ • PERSONALIZADO",
+    "description": "Centro de Treinamento KD — musculação, funcional, fitdance e forró.",
+    "modalities": "MUSCULAÇÃO • FUNCIONAL • FITDANCE • FORRÓ",
     "tagline": "MOVIMENTO REAL\nPARA UMA VIDA MELHOR.",
     "logo": "assets/images/logo-kd-cropped.webp"
   },
@@ -13,19 +13,19 @@
     "message": "Oi, Roany! Quero agendar uma aula experimental."
   },
   "functional": {
-    "title": "TREINO FUNCIONAL\nE PERSONALIZADO",
+    "title": "MUSCULAÇÃO E FUNCIONAL",
     "subtitle": "SEU OBJETIVO. NOSSO PLANO.",
     "phone": "5569993192797",
     "person": "Roany",
-    "message": "Oi, Roany! Quero saber mais sobre o treino funcional e personalizado?",
+    "message": "Oi, Roany! Quero saber mais sobre Musculação e Funcional?",
     "image": "assets/images/treino-funcional-personalizado.webp"
   },
   "dance": {
-    "title": "DANÇA E FORRÓ",
+    "title": "FITDANCE E FORRÓ",
     "subtitle": "ENERGIA QUE TRANSFORMA",
     "phone": "5569993816666",
     "person": "Karol",
-    "message": "Oi, Karol! Quero saber mais sobre Dança e Forró?",
+    "message": "Oi, Karol! Quero saber mais sobre Fitdance e Forró?",
     "image": "assets/images/danca-step.webp"
   },
   "location": {
