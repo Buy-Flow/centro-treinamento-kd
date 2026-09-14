@@ -30,6 +30,13 @@
     return `https://wa.me/${digits}?text=${encodeURIComponent(message || '')}`;
   }
 
+  function isAppleMobile() {
+    const ua = navigator.userAgent || '';
+    const isiOS = /iPhone|iPad|iPod/i.test(ua);
+    const isiPadOS = navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1;
+    return isiOS || isiPadOS;
+  }
+
   function setImage(id, src, alt) {
     const img = $(id);
     if (!img || !src) return;
@@ -72,7 +79,8 @@
     if (c.location) {
       $('location-title').textContent = c.location.title || '';
       $('location-subtitle').textContent = c.location.subtitle || '';
-      if (c.location.url) $('location-link').href = c.location.url;
+      const mapUrl = isAppleMobile() && c.location.appleUrl ? c.location.appleUrl : c.location.url;
+      if (mapUrl) $('location-link').href = mapUrl;
       setImage('location-image', c.location.image, c.location.title);
     }
 
