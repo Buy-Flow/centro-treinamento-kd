@@ -9,15 +9,15 @@
   "experimental": {
     "label": "AGENDAR AULA\nEXPERIMENTAL",
     "phone": "5569993192797",
-    "person": "Roany",
-    "message": "Oi, Roany! Quero agendar uma aula experimental."
+    "person": "Raony",
+    "message": "Oi, Raony! Quero agendar uma aula experimental."
   },
   "functional": {
     "title": "MUSCULAÇÃO E FUNCIONAL",
     "subtitle": "SEU OBJETIVO. NOSSO PLANO.",
     "phone": "5569993192797",
-    "person": "Roany",
-    "message": "Oi, Roany! Quero saber mais sobre Musculação e Funcional?",
+    "person": "Raony",
+    "message": "Oi, Raony! Quero saber mais sobre Musculação e Funcional?",
     "image": "assets/images/treino-funcional-personalizado.webp"
   },
   "dance": {
