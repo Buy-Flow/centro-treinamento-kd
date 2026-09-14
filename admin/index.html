@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#080a09" />
+  <title>Painel KD</title>
+  <link rel="stylesheet" href="admin.css?v=1" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <span class="eyebrow">CENTRO DE TREINAMENTO KD</span>
+      <h1>Painel do site</h1>
+    </div>
+    <a class="ghost" href="../" target="_blank" rel="noopener">Ver site ↗</a>
+  </header>
+
+  <main class="layout">
+    <section class="editor">
+      <div class="notice">
+        <strong>Publicação direta</strong>
+        <p>As alterações abaixo são salvas no GitHub e passam a controlar o site público.</p>
+      </div>
+
+      <details class="card access" open>
+        <summary>Acesso para publicar</summary>
+        <div class="card-body">
+          <label>Token do GitHub
+            <input id="github-token" type="password" autocomplete="off" placeholder="github_pat_..." />
+          </label>
+          <p class="help">Use um token com permissão de escrita em <b>Contents</b> somente neste repositório. O token fica apenas nesta sessão do navegador.</p>
+          <div class="row">
+            <button id="save-token" type="button" class="secondary">Guardar nesta sessão</button>
+            <span id="token-status" class="status"></span>
+          </div>
+        </div>
+      </details>
+
+      <form id="config-form">
+        <section class="card">
+          <h2>Topo do site</h2>
+          <label>Nome do site<input name="site.title" /></label>
+          <label>Modalidades<input name="site.modalities" /></label>
+          <label>Frase principal<textarea name="site.tagline" rows="2"></textarea></label>
+          <label>Descrição para Google<textarea name="site.description" rows="2"></textarea></label>
+          <label>Logo<input id="site-logo" name="site.logo" /></label>
+          <label class="file-label">Trocar logo<input type="file" accept="image/*" data-upload-target="site-logo" /></label>
+        </section>
+
+        <section class="card">
+          <h2>Aula experimental</h2>
+          <label>Texto do botão<textarea name="experimental.label" rows="2"></textarea></label>
+          <div class="grid2">
+            <label>Responsável<input name="experimental.person" /></label>
+            <label>WhatsApp<input name="experimental.phone" inputmode="tel" /></label>
+          </div>
+          <label>Mensagem do WhatsApp<textarea name="experimental.message" rows="3"></textarea></label>
+        </section>
+
+        <section class="card">
+          <h2>Funcional e personalizado</h2>
+          <label>Título<textarea name="functional.title" rows="2"></textarea></label>
+          <label>Subtítulo<input name="functional.subtitle" /></label>
+          <div class="grid2">
+            <label>Responsável<input name="functional.person" /></label>
+            <label>WhatsApp<input name="functional.phone" inputmode="tel" /></label>
+          </div>
+          <label>Mensagem do WhatsApp<textarea name="functional.message" rows="3"></textarea></label>
+          <label>Imagem<input id="functional-image" name="functional.image" /></label>
+          <label class="file-label">Trocar imagem<input type="file" accept="image/*" data-upload-target="functional-image" /></label>
+        </section>
+
+        <section class="card">
+          <h2>Dança e Forró</h2>
+          <label>Título<input name="dance.title" /></label>
+          <label>Subtítulo<input name="dance.subtitle" /></label>
+          <div class="grid2">
+            <label>Responsável<input name="dance.person" /></label>
+            <label>WhatsApp<input name="dance.phone" inputmode="tel" /></label>
+          </div>
+          <label>Mensagem do WhatsApp<textarea name="dance.message" rows="3"></textarea></label>
+          <label>Imagem<input id="dance-image" name="dance.image" /></label>
+          <label class="file-label">Trocar imagem<input type="file" accept="image/*" data-upload-target="dance-image" /></label>
+        </section>
+
+        <section class="card">
+          <h2>Localização</h2>
+          <label>Título<input name="location.title" /></label>
+          <label>Subtítulo<input name="location.subtitle" /></label>
+          <label>Link do mapa<input name="location.url" type="url" /></label>
+          <label>Imagem<input id="location-image" name="location.image" /></label>
+          <label class="file-label">Trocar imagem<input type="file" accept="image/*" data-upload-target="location-image" /></label>
+        </section>
+
+        <section class="card">
+          <h2>Instagram</h2>
+          <label>Título<input name="instagram.title" /></label>
+          <label>Subtítulo<input name="instagram.subtitle" /></label>
+          <label>Link do Instagram<input name="instagram.url" type="url" /></label>
+          <label>Imagem<input id="instagram-image" name="instagram.image" /></label>
+          <label class="file-label">Trocar imagem<input type="file" accept="image/*" data-upload-target="instagram-image" /></label>
+        </section>
+
+        <section class="card">
+          <h2>Rodapé</h2>
+          <label>Linha central<input name="footer.center" /></label>
+          <div class="grid3">
+            <label>Benefício 1<textarea name="footer.benefit1" rows="2"></textarea></label>
+            <label>Benefício 2<textarea name="footer.benefit2" rows="2"></textarea></label>
+            <label>Benefício 3<textarea name="footer.benefit3" rows="2"></textarea></label>
+          </div>
+        </section>
+
+        <div class="publish-bar">
+          <div>
+            <strong id="publish-title">Alterações não publicadas</strong>
+            <span id="publish-status">Edite os campos e toque em publicar.</span>
+          </div>
+          <button id="publish" type="submit">PUBLICAR ALTERAÇÕES</button>
+        </div>
+      </form>
+    </section>
+
+    <aside class="preview-wrap">
+      <div class="preview-head"><strong>Prévia do site</strong><button id="refresh-preview" class="ghost small" type="button">Atualizar</button></div>
+      <div class="phone-frame"><iframe id="preview" title="Prévia do site" src="../"></iframe></div>
+    </aside>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="admin.js?v=1"></script>
+</body>
+</html>
